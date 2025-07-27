@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asientos</title>
+    <link rel="stylesheet" href="css/asientos.css">
+    <script src="https://kit.fontawesome.com/f00de90934.js" crossorigin="anonymous"></script>
+    <script src="js/asientos.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div id="btn-atras" class="btn-atras">
+            <i class="fa-solid fa-arrow-left"></i>Atrás
+        </div>
+        <div class="logo">CINERAMA</div>
+    </header>
+
+    <!-- Modal de salir de la compra -->
+    <section id="modal-alert-salir" class="modal-alert-salir remove">
+        <div class="modal-alert-contenido">
+            <div class="alert-salir-texto">
+                <h2>¡Espera!</h2>
+                <h3>¿Está seguro de salir de su proceso de compra?</h3>
+                <p>Perderá todo lo seccionado</p>
+            </div>
+            <div class="alert-salir-button">
+                <button id="alerta-confirmar">Confirmar</button>
+                <button id="alerta-continuar">Continuar</button>
+            </div>
+        </div>
+    </section>
+
+    <article id="asiento-article">
+        <section class="pelicula-info">
+            <div class="pelicula-info-img">
+                <img id="img-pelicula" class="img-pelicula" src="" alt="pelicula-img"> <!-- Imagen -->
+            </div>
+            <div class="pelicula-info-text">
+                <h2 id="titulo" class="titulo"></h2> <!-- Titulo-->
+                <p id="tipo-pelicula" class="tipo-pelicula"></p> <!-- Tipo de Cine 2D || 3D -->
+                <p id="fecha-actual" class="fecha-actual"></p> <!-- Fecha actual -->
+                <p id="hora" class="hora"></p> <!-- Hora -->
+                <p id="sala" class="sala"></p> <!-- Sala -->
+            </div>
+        </section>
+        
+        <section class="asientos" id="asientos">
+            <div class="asientos-contenido">
+                <div class="asientos-pantalla">
+                    <p>Pantalla</p>
+                    <div class="pantalla"></div>
+                </div>
+                <div class="asientos-all">
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="A1"></div>
+                        <div class="asiento-box" data-asiento="A2"></div>
+                        <div class="asiento-box" data-asiento="A3"></div>
+                        <div class="asiento-box" data-asiento="A4"></div>
+                        <div class="asiento-box" data-asiento="A5"></div>
+                        <div class="asiento-box" data-asiento="A6"></div>
+                        <div class="asiento-box" data-asiento="A7"></div>
+                        <div class="asiento-box" data-asiento="A8"></div>
+                        <div class="asiento-box" data-asiento="A9"></div>
+                        <div class="asiento-box" data-asiento="A10"></div>
+                        <div class="asiento-box" data-asiento="A11"></div>
+                        <div class="asiento-box" data-asiento="A12"></div>
+                        <div class="asiento-box" data-asiento="A13"></div>
+                        <div class="asiento-box" data-asiento="A14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="B1"></div>
+                        <div class="asiento-box" data-asiento="B2"></div>
+                        <div class="asiento-box" data-asiento="B3"></div>
+                        <div class="asiento-box" data-asiento="B4"></div>
+                        <div class="asiento-box" data-asiento="B5"></div>
+                        <div class="asiento-box" data-asiento="B6"></div>
+                        <div class="asiento-box" data-asiento="B7"></div>
+                        <div class="asiento-box" data-asiento="B8"></div>
+                        <div class="asiento-box" data-asiento="B9"></div>
+                        <div class="asiento-box" data-asiento="B10"></div>
+                        <div class="asiento-box" data-asiento="B11"></div>
+                        <div class="asiento-box" data-asiento="B12"></div>
+                        <div class="asiento-box" data-asiento="B13"></div>
+                        <div class="asiento-box" data-asiento="B14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="C1"></div>
+                        <div class="asiento-box" data-asiento="C2"></div>
+                        <div class="asiento-box" data-asiento="C3"></div>
+                        <div class="asiento-box" data-asiento="C4"></div>
+                        <div class="asiento-box" data-asiento="C5"></div>
+                        <div class="asiento-box" data-asiento="C6"></div>
+                        <div class="asiento-box" data-asiento="C7"></div>
+                        <div class="asiento-box" data-asiento="C8"></div>
+                        <div class="asiento-box" data-asiento="C9"></div>
+                        <div class="asiento-box" data-asiento="C10"></div>
+                        <div class="asiento-box" data-asiento="C11"></div>
+                        <div class="asiento-box" data-asiento="C12"></div>
+                        <div class="asiento-box" data-asiento="C13"></div>
+                        <div class="asiento-box" data-asiento="C14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="D1"></div>
+                        <div class="asiento-box" data-asiento="D2"></div>
+                        <div class="asiento-box" data-asiento="D3"></div>
+                        <div class="asiento-box" data-asiento="D4"></div>
+                        <div class="asiento-box" data-asiento="D5"></div>
+                        <div class="asiento-box" data-asiento="D6"></div>
+                        <div class="asiento-box" data-asiento="D7"></div>
+                        <div class="asiento-box" data-asiento="D8"></div>
+                        <div class="asiento-box" data-asiento="D9"></div>
+                        <div class="asiento-box" data-asiento="D10"></div>
+                        <div class="asiento-box" data-asiento="D11"></div>
+                        <div class="asiento-box" data-asiento="D12"></div>
+                        <div class="asiento-box" data-asiento="D13"></div>
+                        <div class="asiento-box" data-asiento="D14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="E1"></div>
+                        <div class="asiento-box" data-asiento="E2"></div>
+                        <div class="asiento-box" data-asiento="E3"></div>
+                        <div class="asiento-box" data-asiento="E4"></div>
+                        <div class="asiento-box" data-asiento="E5"></div>
+                        <div class="asiento-box" data-asiento="E6"></div>
+                        <div class="asiento-box" data-asiento="E7"></div>
+                        <div class="asiento-box" data-asiento="E8"></div>
+                        <div class="asiento-box" data-asiento="E9"></div>
+                        <div class="asiento-box" data-asiento="E10"></div>
+                        <div class="asiento-box" data-asiento="E11"></div>
+                        <div class="asiento-box" data-asiento="E12"></div>
+                        <div class="asiento-box" data-asiento="E13"></div>
+                        <div class="asiento-box" data-asiento="E14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="F1"></div>
+                        <div class="asiento-box" data-asiento="F2"></div>
+                        <div class="asiento-box" data-asiento="F3"></div>
+                        <div class="asiento-box" data-asiento="F4"></div>
+                        <div class="asiento-box" data-asiento="F5"></div>
+                        <div class="asiento-box" data-asiento="F6"></div>
+                        <div class="asiento-box" data-asiento="F7"></div>
+                        <div class="asiento-box" data-asiento="F8"></div>
+                        <div class="asiento-box" data-asiento="F9"></div>
+                        <div class="asiento-box" data-asiento="F10"></div>
+                        <div class="asiento-box" data-asiento="F11"></div>
+                        <div class="asiento-box" data-asiento="F12"></div>
+                        <div class="asiento-box" data-asiento="F13"></div>
+                        <div class="asiento-box" data-asiento="F14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="G1"></div>
+                        <div class="asiento-box" data-asiento="G2"></div>
+                        <div class="asiento-box" data-asiento="G3"></div>
+                        <div class="asiento-box" data-asiento="G4"></div>
+                        <div class="asiento-box" data-asiento="G5"></div>
+                        <div class="asiento-box" data-asiento="G6"></div>
+                        <div class="asiento-box" data-asiento="G7"></div>
+                        <div class="asiento-box" data-asiento="G8"></div>
+                        <div class="asiento-box" data-asiento="G9"></div>
+                        <div class="asiento-box" data-asiento="G10"></div>
+                        <div class="asiento-box" data-asiento="G11"></div>
+                        <div class="asiento-box" data-asiento="G12"></div>
+                        <div class="asiento-box" data-asiento="G13"></div>
+                        <div class="asiento-box" data-asiento="G14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="H1"></div>
+                        <div class="asiento-box" data-asiento="H2"></div>
+                        <div class="asiento-box" data-asiento="H3"></div>
+                        <div class="asiento-box" data-asiento="H4"></div>
+                        <div class="asiento-box" data-asiento="H5"></div>
+                        <div class="asiento-box" data-asiento="H6"></div>
+                        <div class="asiento-box" data-asiento="H7"></div>
+                        <div class="asiento-box" data-asiento="H8"></div>
+                        <div class="asiento-box" data-asiento="H9"></div>
+                        <div class="asiento-box" data-asiento="H10"></div>
+                        <div class="asiento-box" data-asiento="H11"></div>
+                        <div class="asiento-box" data-asiento="H12"></div>
+                        <div class="asiento-box" data-asiento="H13"></div>
+                        <div class="asiento-box" data-asiento="H14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="I1"></div>
+                        <div class="asiento-box" data-asiento="I2"></div>
+                        <div class="asiento-box" data-asiento="I3"></div>
+                        <div class="asiento-box" data-asiento="I4"></div>
+                        <div class="asiento-box" data-asiento="I5"></div>
+                        <div class="asiento-box" data-asiento="I6"></div>
+                        <div class="asiento-box" data-asiento="I7"></div>
+                        <div class="asiento-box" data-asiento="I8"></div>
+                        <div class="asiento-box" data-asiento="I9"></div>
+                        <div class="asiento-box" data-asiento="I10"></div>
+                        <div class="asiento-box" data-asiento="I11"></div>
+                        <div class="asiento-box" data-asiento="I12"></div>
+                        <div class="asiento-box" data-asiento="I13"></div>
+                        <div class="asiento-box" data-asiento="I14"></div>
+                    </div>
+                    <div class="asientos-fila">
+                        <div class="asiento-box" data-asiento="J1"></div>
+                        <div class="asiento-box" data-asiento="J2"></div>
+                        <div class="asiento-box" data-asiento="J3"></div>
+                        <div class="asiento-box" data-asiento="J4"></div>
+                        <div class="asiento-box" data-asiento="J5"></div>
+                        <div class="asiento-box" data-asiento="J6"></div>
+                        <div class="asiento-box" data-asiento="J7"></div>
+                        <div class="asiento-box" data-asiento="J8"></div>
+                        <div class="asiento-box" data-asiento="J9"></div>
+                        <div class="asiento-box" data-asiento="J10"></div>
+                        <div class="asiento-box" data-asiento="J11"></div>
+                        <div class="asiento-box" data-asiento="J12"></div>
+                        <div class="asiento-box" data-asiento="J13"></div>
+                        <div class="asiento-box" data-asiento="J14"></div>
+                    </div>
+                   
+                </div>
+                <div class="asiento-info">
+                    <div class="asiento-info-disponible">
+                        <div class="item-info-disponible"></div>
+                        <p>Disponible</p>
+                    </div>
+                    <div class="asiento-info-seleccionada">
+                        <div class="item-info-seleccionada"></div>
+                        <p>Seleccionada</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="pago-info">
+            <div class="pago-info-all">
+                <div class="pago-info-aviso">
+                    <h3>Importante</h3>
+                    <ul>
+                        <li>Solo alimentos comprados en el cine permitidos</li>
+                        <li>Prohibido ingresar comida externa</li>
+                        <li>Películas +18: Exclusivo para mayores de edad</li>
+                    </ul>
+                </div>
+                <div class="pago-info-contenido">
+                    <h2>Detalles de su compra</h2>
+                    <p class="pago-info-text">Total de entradas : <span id="total-entrada">0</span></p>
+                    <p class="pago-info-text">Butacas seleccionadas : <span id="butacas-seleccionadas"></span></p>
+                    <p class="pago-info-text">Productos seleccionados : <span id="productos-seleccionados"></span></p>
+                    <div class="linea"></div>
+                    <p id="total-pagar" class="total-pagar">0.00</p>
+                </div>
+            </div>
+            <div class="pago-info-button">
+                <button id="btn-continuar" class="bloquear" disabled>Continuar<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/TwitterInc/?locale=es_LA" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/?source=auth_switcher&locale=es_ES"
+                            target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📞 Teléfono: <a href="tel:967356714">967356714</a></p>
+                <p>📧 Email: <a href="mailto:info@empresa.com">info@empresa.com</a></p>
+                <p>📍 Dirección: Calle Ejemplo 123, Ciudad, País</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="quick-links">
+                    <a href="#inicio" class="scroll-suave">Inicio</a>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <b>
+                <marquee>
+                    <p>&copy; 2025 Mi Empresa. Todos los derechos son reservados.</p>
+                </marquee>
+            </b>
+        </div>
+
+    </footer>
+
+    
+</body>
+</html>
