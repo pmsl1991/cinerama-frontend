@@ -91,5 +91,11 @@ class CineramaLogin {
         console.error(error);
         alert("Error en la conexión con el servidor");
     }
-    }
   }
+}
+
+// Instanciar al final de tu script
+document.addEventListener("DOMContentLoaded", () => {
+  new CineramaLogin();
+});
+
