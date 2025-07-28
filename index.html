@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinerama</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Login.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
 
     <!-- Header -->
     <header>
-        <div class="logo">CINERAMA</div>
+        <div class="logo" id="logo-cinerama" style="cursor:pointer;">CINERAMA</div>
+
         
         <!-- Botón Hamburguesa -->
         <div class="hamburger" id="hamburger">
@@ -40,6 +42,30 @@
             <img src="imagenes/banner3.jpg" alt="Banner 3">
         </div>
     </section>
+
+    <!-- Modal de Login -->
+        <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Acceso de Administrador</h2>
+            
+            <!-- CAPTCHA -->
+            <div id="captchaContainer"></div>
+            
+            <!-- Formulario -->
+            <form id="loginForm">
+            <input type="email" id="emailInput" placeholder="Ingresa tu correo" required />
+            <button type="submit">Enviar código</button>
+            </form>
+
+            <!-- Verificación -->
+            <form id="verifyForm" style="display:none;">
+            <input type="text" id="codeInput" placeholder="Ingresa el código" required />
+            <button type="submit">Verificar</button>
+            </form>
+        </div>
+        </div>
+
 
     <!-- Sección Nuestros Cines -->
     <section id="cines">
