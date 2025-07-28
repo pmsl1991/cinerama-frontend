@@ -43,7 +43,9 @@ class CineramaLogin {
     this.verifyForm = document.getElementById("verifyForm");
     this.logo = document.getElementById("logo-cinerama");
 
-    this.backendUrl = "https://backend-cinerama.onrender.com";
+    this.backendUrl = "https://cinerama-backend.onrender.com";
+
+
 
 
     this.inicializarEventos();
