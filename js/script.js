@@ -92,7 +92,7 @@ class CineramaLogin {
         alert("Error en la conexión con el servidor");
     }
   }
-}
+} // ← AQUÍ FALTABA ESTA LLAVE de cierre de clase
 
 // Instanciar al final de tu script
 document.addEventListener("DOMContentLoaded", () => {
